@@ -7,7 +7,7 @@ export default defineConfig({
   server:{
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'https://product-management-backend-production.up.railway.app',
+        target: process.env.VITE_API_URL ||'http://localhost:5000',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ''),
